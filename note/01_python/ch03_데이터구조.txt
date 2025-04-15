@@ -7,7 +7,7 @@
 	삭제 : lst.pop(), lst.pop(idx), lst.remove(data)
 	찾기 : lst.index(data), lst.count(data)
 	정렬 : lst.sort(reverse=True)
-	역순 : lst.reverse()
+	역순 : lst.reverse() 
 2절. 튜플 : tup = (data, ) 수정 불가
 	len(tup) : 요수 갯수
 	min(tup), max(tup), sum(tup), sorted(tup, reverse=True) : 최소, 최대, 합, 정렬
