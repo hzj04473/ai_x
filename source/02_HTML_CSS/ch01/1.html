@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head : 설정정보-->
+    <meta charset="UTF-8" />
+    <meta />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>첫예제</title>
+    <style>
+      /* 이 페이지의 디자인 영역 (CSS/CSS3) */
+      body {
+        background-color: yellow;
+        font-size: 30pt;
+      }
+    </style>
+    <script>
+      /* 동적인 부분 */
+      const name = prompt('이름은?', '홍길동'); // 취소클릭시 'null' 리턴
+      if (name !== 'null' && name !== '') {
+        // 입력 후 확인 클릭시
+        document.write(`${name} 님 반갑습니다.<br />`);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- body 부분에는 웹문서에 출력될 정보 -->
+    안녕하세요<br />
+    오늘부터 웹표준 &nbsp; &nbsp; &nbsp; 수업시작합니다<br />
+    Hello. World
+  </body>
+</html>
