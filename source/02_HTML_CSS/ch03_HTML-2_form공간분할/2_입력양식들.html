@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_입력양식들</title>
+  </head>
+  <body>
+    <form action="#">
+      <input type="hidden" name="hiddenparam" value="히든값" />
+      <table>
+        <tr>
+          <td><label for="id">아이디</label></td>
+          <td>
+            <input
+              type="text"
+              id="id"
+              name="id"
+              size="9"
+              required="required"
+              placeholder="필수입력사항(입력전에 보이는 도움말)"
+            />
+            <input type="button" value="중복확인" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pw">비밀번호</label></td>
+          <td>
+            <input type="password" id="pw" name="pw" />
+          </td>
+        </tr>
+        <tr>
+          <td>전화번호</td>
+          <td>
+            <input type="tel" name="tel1" size="3" />-<input
+              type="tel"
+              name="tel2"
+              size="4"
+            />-<input type="tel" name="tel3" size="4" />
+          </td>
+        </tr>
+        <tr>
+          <td>경력</td>
+          <td><input type="number" name="career" min="0" max="100" />년</td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td>
+            <input type="email" name="email" />
+          </td>
+        </tr>
+        <tr>
+          <td>사진</td>
+          <td>
+            <input type="file" name="filename" />
+          </td>
+        </tr>
+        <tr>
+          <td>성별</td>
+          <td>
+            <input type="radio" id="m" name="gender" value="m" checked="checked" />
+            <label for="m">남</label>
+            <input type="radio" id="f" name="gender" value="f" />
+            <label for="f">여</label>
+          </td>
+        </tr>
+        <tr>
+          <td>사용언어</td>
+          <td>
+            <input type="checkbox" id="kor" name="lang" value="kor" checked="checked" />
+            <label for="kor">한국어</label>
+            <input type="checkbox" id="eng" name="lang" value="eng" />
+            <label for="eng">영어</label>
+            <input type="checkbox" id="chi" name="lang" value="chi" />
+            <label for="chi">중국어</label>
+          </td>
+        </tr>
+        <tr>
+          <td>국적</td>
+          <td>
+            <select name="nation" id="nation">
+              <option value="ko">대한민국</option>
+              <option>인도</option>
+              <option>중국</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>좋아하는 음식</td>
+          <td>
+            <select name="food" id="food" multiple="multiple" size="3">
+              <option>볶음밥</option>
+              <option>비빔밥</option>
+              <option>주먹밥</option>
+              <option>감자탕</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>자기소개</td>
+          <td><textarea name="intro" id="intro" rows="3" cols="25"></textarea></td>
+        </tr>
+        <tr>
+          <td>생년월일</td>
+          <td><input type="date" name="birth" /></td>
+        </tr>
+        <tr>
+          <td>본인 git url</td>
+          <td><input type="url" name="git" /></td>
+        </tr>
+        <tr>
+          <td>
+            좋아하는색상 <br />
+            좋아하는정도
+          </td>
+          <td>
+            <input type="color" name="color" /><br />
+            0<input type="range" name="range" min="0" max="100" step="5" value="0" />100
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <input type="submit" value="입력" />
+            <input type="reset" value="초기화" />
+          </th>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
