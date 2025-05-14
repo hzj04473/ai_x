@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10_구조선택자2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div#nav {
+        width: 800px;
+        margin: 10px auto;
+      }
+      div#nav ul {
+        overflow: hidden;
+      }
+      div#nav ul li {
+        width: 74px;
+        float: left;
+        list-style: none;
+        border: 1px solid gray;
+        padding: 10px;
+        text-align: center; /* 폰트나 img 가운데 정렬*/
+        font-size: 20px;
+        font-weight: bold; /* 글씨 진하게 */
+        margin: 2px;
+      }
+
+      div#nav ul li a {
+        /* 밑줄 없애기, 글씨 색상 */
+        text-decoration: none;
+        color: #000;
+      }
+
+      div#nav ul li:nth-child(2n + 1) {
+        /*ul 밑에 li중 홀수번쨰 */
+        background-color: orange;
+      }
+
+      div#nav ul li:first-child {
+        /* ul 밑의 첫번쨰 */
+        border-radius: 20px 0 0 20px; /* 좌상, 우상, 우하, 좌하  */
+        background-color: lightgray;
+      }
+
+      div#nav ul li:nth-child(2n) {
+        /*ul 밑에 li중 홀수번쨰 */
+        background-color: yellow;
+      }
+
+      div#nav ul li:last-child {
+        border-radius: 0 20px 20px 0;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <li><a href="#">menu 1</a></li>
+        <li><a href="#">menu 2</a></li>
+        <li><a href="#">menu 3</a></li>
+        <li><a href="#">menu 4</a></li>
+        <li><a href="#">menu 5</a></li>
+        <li><a href="#">menu 6</a></li>
+        <li><a href="#">menu 7</a></li>
+        <li><a href="#">menu 8</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

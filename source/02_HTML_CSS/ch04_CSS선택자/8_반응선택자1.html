@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8_반응선택자1</title>
+    <style>
+      div#nav {
+        width: 300px;
+        margin: 0 auto;
+        background-color: red;
+      }
+
+      #nav ul > li {
+        /* 자손 선택자 */
+        color: #fff;
+        font-size: 48px;
+      }
+
+      #nav ul li:hover {
+        /* 후선선택자 */
+        /* li에 마우스를 올렸을 떄만 */
+        color: pink;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <li>PYTHON</li>
+        <li>HTML/CSS</li>
+        <li>DNN</li>
+        <li>CNN</li>
+        <li>RNN</li>
+      </ul>
+    </div>
+  </body>
+</html>

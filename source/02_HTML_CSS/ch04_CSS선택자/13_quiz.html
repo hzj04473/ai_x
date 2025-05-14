@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13_quiz</title>
+    <style>
+      /* 전체 레이아웃 잡기 */
+      #header,
+      #content,
+      #footer {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .left,
+      .right {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background-color: lightblue;
+        border: 1px solid gray;
+      }
+      .center {
+        float: left;
+        width: 693px;
+        height: 150px;
+        background-color: lightblue;
+        border: 1px solid gray;
+      }
+      /* border radius 부분 시작 */
+      #header > .left {
+        border-radius: 30px 0 30px 0;
+      }
+
+      #header > .center {
+        border-radius: 0 0 30px 30px;
+      }
+
+      #header > .right {
+        border-radius: 0 30px 0 30px;
+      }
+
+      #content > .left {
+        border-radius: 0 30px 30px 0;
+      }
+
+      #content > .center {
+        border-radius: 30px 30px 30px 30px;
+      }
+
+      #content > .right {
+        border-radius: 30px 0 0 30px;
+      }
+
+      #footer > .left {
+        border-radius: 0 30px 0 30px;
+      }
+
+      #footer > .center {
+        border-radius: 30px 30px 0 0;
+      }
+
+      #footer > .right {
+        border-radius: 30px 0 30px 0;
+      }
+      /* border radius 부분 끝 */
+
+      #content > div {
+        height: 300px;
+      }
+
+      /* 메뉴 시작*/
+      #content #nav {
+        margin: 30px 0;
+      }
+      #content #nav ul {
+        overflow: hidden;
+        width: 693px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      #content #nav ul li {
+        float: left;
+        list-style: none;
+        font-size: 30px;
+        width: 231px;
+        font-weight: bold;
+      }
+      /* 메뉴 끝*/
+
+      /* 아카데이 시작 */
+      #content #academy h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      #content #academy p {
+        text-align: left;
+        margin: 0 20px;
+        margin-bottom: 30px;
+      }
+      /* 아카데이 끝 */
+
+      /* 사이드 시작 */
+      #content div.right ol li:nth-child(10),
+      #content div.right ol li:nth-child(11),
+      #content div.right ol li:nth-child(12) {
+        color: red;
+      }
+      /* 사이드 끝*/
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="left"></div>
+      <div class="center"></div>
+      <div class="right"></div>
+    </div>
+
+    <div id="content">
+      <div class="left"></div>
+      <div class="center">
+        <div id="nav">
+          <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+          </ul>
+        </div>
+
+        <div id="academy">
+          <h1>AI 개발자 양성과정</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quo facilis nemo
+            minus possimus sapiente nisi, dignissimos doloribus est aspernatur blanditiis odio eum
+            earum error eius ipsum suscipit. Commodi, aliquid. Error id nobis quos ipsam incidunt
+            molestias repellat ullam. Asperiores fuga quisquam aut, voluptatibus iste impedit,
+            veniam excepturi quidem ut similique adipisci nam aspernatur? Inventore et fugiat sunt
+            numquam asperiores?
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <ol>
+          <li>태그</li>
+          <li>전체(*)</li>
+          <li>id, class</li>
+          <li>속성</li>
+          <li>후손,자손(>)</li>
+          <li>동위</li>
+          <li>반응</li>
+          <li>상태</li>
+          <li>구조</li>
+          <li class="red">문자</li>
+          <li class="red">링크</li>
+          <li class="red">부정</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="left"></div>
+      <div class="center"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

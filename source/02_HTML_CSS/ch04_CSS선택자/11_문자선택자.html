@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11_문자선택자</title>
+    <style>
+      #wrap {
+        width: 750px;
+        margin: 0 auto;
+      }
+
+      #wrap #header {
+        text-align: center;
+      }
+
+      #wrap #content {
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        text-align: justify;
+      }
+
+      #wrap #content p:nth-child(2)::first-line,
+      #wrap #content p:nth-child(3)::first-line {
+        font-weight: bold; /* 글자 진하기 */
+        color: blue; /* 글자색 */
+      }
+      #wrap #content p:nth-child(2)::first-letter,
+      #wrap #content p:nth-child(3)::first-letter {
+        font-size: 2.5em; /* 글자크기를 2.5배 */
+      }
+
+      #wrap #footer ul {
+        overflow: hidden;
+      }
+
+      #wrap #footer ul li {
+        float: left;
+        list-style: none;
+        padding: 15px;
+      }
+
+      #wrap #footer ul li:first-child {
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1>제목이나 회사명</h1>
+      </div>
+      <div id="content">
+        <p>오후에 기온 오름. 덥다</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorem sed totam, corrupti
+          reiciendis porro asperiores magnam labore officia molestias esse? Quaerat sed eos aliquid!
+          Cumque eius fugit placeat enim! Commodi, at porro ut earum doloribus, est unde illo ipsum
+          optio libero soluta dolores quo nemo reprehenderit itaque quasi et sequi qui iste impedit?
+          Tenetur sint sapiente sequi minima velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorem sed totam, corrupti
+          reiciendis porro asperiores magnam labore officia molestias esse? Quaerat sed eos aliquid!
+          Cumque eius fugit placeat enim! Commodi, at porro ut earum doloribus, est unde illo ipsum
+          optio libero soluta dolores quo nemo reprehenderit itaque quasi et sequi qui iste impedit?
+          Tenetur sint sapiente sequi minima velit.
+        </p>
+      </div>
+      <div id="footer">
+        <ul>
+          <li><img src="./ch04_img/logo.png" alt="고용부 로고" /></li>
+          <li><img src="./ch04_img/address.png" alt="주소" /></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
