@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6_후손자손선택자</title>
+    <style>
+      #wrap {
+        width: 600px;
+        margin: 0 auto; /* wrap 가운데 정렬*/
+        border: 1px solid #999999;
+      }
+      /* > : 자속선택자 */
+      #wrap > #header {
+        overflow: hidden; /* 수평으로 하고 싶은 태그 부모단 */
+      }
+
+      /* space : 후손선택자 */
+      #wrap .logo {
+        float: left;
+        padding: 10px 30px 10px 150px;
+      }
+
+      /* space : 후손선택자 */
+      #wrap .title {
+        float: left;
+        padding: 20px 150px 10px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <div class="logo"><h1>LOGO</h1></div>
+        <div class="title"><h2>OO주식회사</h2></div>
+      </div>
+      <div id="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+          excepturi, tenetur quo ad facilis numquam sint a quis dolores quod
+          perferendis dolorem qui optio. Facere nostrum sunt laboriosam minus
+          saepe. Optio, magnam velit? Accusamus nam harum sit vero aspernatur
+          velit dignissimos rerum expedita, dolorum explicabo veritatis.
+          Voluptatem natus, odio, vitae obcaecati deleniti blanditiis aliquam
+          ratione fugiat esse vel nam iste. Quaerat at consectetur dicta earum.
+          Consequuntur eos minima eaque amet, earum dicta explicabo, dolores
+          delectus nesciunt reiciendis voluptate magnam eligendi, doloremque ea
+          asperiores quam iusto. Tempora, beatae! Consectetur, atque numquam?
+          Eligendi dolore consequuntur laboriosam repellendus dolores nobis
+          velit alias corrupti est provident ab tempora cumque, optio laudantium
+          unde consequatur facilis veritatis ea eos quibusdam. Quis architecto
+          animi provident voluptas fugiat. Laudantium, tenetur enim provident
+          vero aliquid voluptatibus alias atque qui fugit non earum ad
+          consequuntur soluta eveniet asperiores animi adipisci culpa eum
+          inventore hic ea. Totam unde facilis et cupiditate.
+        </p>
+        <ul>
+          <li><p>여기 content 밑에 ul 밑에 li 밑에 p</p></li>
+          <li><p>여기 content 밑에 ul 밑에 li 밑에 p</p></li>
+          <li><p>여기 content 밑에 ul 밑에 li 밑에 p</p></li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>서울시 관악구 신림동 xx번지</p>
+      </div>
+    </div>
+  </body>
+</html>

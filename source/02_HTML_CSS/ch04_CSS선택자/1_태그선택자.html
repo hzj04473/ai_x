@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.태그선택자</title>
+    <style>
+      /* CSS는 위에서부터 아래로 차례차례 적용 */
+      header,
+      footer {
+        color: blue; /* 글자색 */
+        border: 1px solid gray; /* border 1px짜리 회색 실선 */
+      }
+
+      h1 {
+        border: 1px solid red;
+        margin: 0; /* 밖여백 : 위, 오른쪽, 아래, 왼쪽 0px 여백*/
+      }
+
+      li,
+      p {
+        color: red;
+        background-color: pink;
+        font-weight: bold; /* 글씨 두껍게 */
+      }
+
+      p {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>00 주식회사</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>회사소개</li>
+        <li>서비스소개</li>
+        <li>고객센터</li>
+        <li>공지사항</li>
+      </ul>
+    </nav>
+    <section>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, culpa atque adipisci neque
+        assumenda quisquam. Porro suscipit numquam ab id recusandae quidem obcaecati incidunt nemo,
+        eligendi facere quam exercitationem vel. Maxime dicta illum at eveniet placeat, libero
+        voluptates aliquam fuga reprehenderit praesentium? Earum doloremque et officiis ut
+        excepturi. Necessitatibus ullam eligendi, accusamus in sit eveniet ex mollitia labore
+        perferendis rem? Adipisci iste, accusamus nemo vero dolor blanditiis fugiat, perspiciatis
+        repudiandae amet, quos quidem fuga aliquid voluptas ad nisi hic non illo culpa doloremque
+        officia voluptatibus quae! Quas nobis nam quae!
+      </p>
+    </section>
+    <footer><p>서울시 떙떙구 뭐뭐로 99 무슨빌딩 901호</p></footer>
+  </body>
+</html>

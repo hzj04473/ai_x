@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.전체선택자</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet" /> -->
+    <style>
+      * {
+        /* 전체선택자 == 페이지 전체 태그 : 페이지 초기화 */
+        margin: 0; /* 밖 여백 (상, 우, 하, 좌) */
+        padding: 0; /* 안 여백 (상, 우, 하, 좌) */
+        color: saddlebrown;
+      }
+
+      header,
+      nav,
+      section,
+      footer {
+        width: 500px; /* 가로사이즈(width를 지정하지 않으면, block형 태그는 부모 width를 따름) */
+        border: 1px solid gray;
+        margin: 2px auto;
+      }
+
+      nav ul {
+        /* 수평으로 하고 픈 태그의 부모 */
+        overflow: hidden;
+      }
+
+      nav ul li {
+        /* 수평으로 할 태그 */
+        float: left;
+        list-style: none;
+        /* border: 1px solid red; */
+        /* margin: 10px 30px; */
+        width: 125px;
+        text-align: center; /* 글씨 가운데 정렬*/
+        margin: 10px 0;
+      }
+
+      section {
+        /* 수평 속성을 지우고 싶은 태그 */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>00 주식회사</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>회사소개</li>
+        <li>서비스소개</li>
+        <li>고객센터</li>
+        <li>공지사항</li>
+      </ul>
+    </nav>
+    <section>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, culpa atque adipisci neque
+        assumenda quisquam. Porro suscipit numquam ab id recusandae quidem obcaecati incidunt nemo,
+        eligendi facere quam exercitationem vel. Maxime dicta illum at eveniet placeat, libero
+        voluptates aliquam fuga reprehenderit praesentium? Earum doloremque et officiis ut
+        excepturi. Necessitatibus ullam eligendi, accusamus in sit eveniet ex mollitia labore
+        perferendis rem? Adipisci iste, accusamus nemo vero dolor blanditiis fugiat, perspiciatis
+        repudiandae amet, quos quidem fuga aliquid voluptas ad nisi hic non illo culpa doloremque
+        officia voluptatibus quae! Quas nobis nam quae!
+      </p>
+    </section>
+    <footer><p>서울시 떙떙구 뭐뭐로 99 무슨빌딩 901호</p></footer>
+  </body>
+</html>
