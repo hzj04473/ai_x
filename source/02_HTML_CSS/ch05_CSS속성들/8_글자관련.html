@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8_글자관련</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @font-face {
+        font-family: 'Dongle-Regular';
+        src: url('./ch05_font/Dongle-Regular.ttf');
+      }
+
+      p.localfont {
+        line-height: 40px; /* 행간젹 늘리기 */
+        font-family: 'Dongle-Regular', 'Times New Roman', Times, serif;
+        text-decoration: underline; /* 밑줄 */
+        font-size: 2em;
+        font-style: italic;
+      }
+
+      p.webfont {
+        font-family: 'Single Day', cursive, 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-size: 2em;
+        font-style: normal;
+      }
+
+      p.webfont2 {
+        font-family: 'Gugi', sans-serif, 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-size: 2em;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="localfont">
+      다운받은 ttf파일을 내 경로 안에 넣고, font-face설정한 후 사용 : Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Blanditiis eveniet ullam voluptate id fugiat quasi esse commodi
+      velit minus, non maiores. Qui quaerat quibusdam temporibus vitae aperiam minus, voluptatibus
+      tempora. Ex aliquid perspiciatis nostrum assumenda, mollitia officia officiis voluptate
+      tempora libero facere, quae adipisci natus? Explicabo blanditiis labore eum magni possimus ad
+      nisi, tempore provident necessitatibus! Itaque nulla quo iure.
+    </p>
+    <p class="webfont">
+      fonts.google.com의 인터넷 폰트 : Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Voluptate totam illo quia modi commodi, ad pariatur debitis rerum labore. Aspernatur minus
+      cupiditate rem quas alias natus necessitatibus consequatur, libero quis. Laboriosam ipsa neque
+      modi similique doloribus quae autem inventore, ex excepturi, aspernatur veniam recusandae!
+      Quam beatae dolorem inventore aliquid, commodi, suscipit saepe vitae necessitatibus deserunt
+      eius, at neque dolor rerum!
+    </p>
+    <p class="webfont2">
+      fonts.google.com의 인터넷 폰트 : Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Voluptate totam illo quia modi commodi, ad pariatur debitis rerum labore. Aspernatur minus
+      cupiditate rem quas alias natus necessitatibus consequatur, libero quis. Laboriosam ipsa neque
+      modi similique doloribus quae autem inventore, ex excepturi, aspernatur veniam recusandae!
+      Quam beatae dolorem inventore aliquid, commodi, suscipit saepe vitae necessitatibus deserunt
+      eius, at neque dolor rerum!
+    </p>
+  </body>
+</html>

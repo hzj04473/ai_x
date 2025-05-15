@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_URL함수</title>
+    <style>
+      /* 가져온 폰트 지정 */
+      @font-face {
+        font-family: 'NanumGN';
+        src: url('./ch05_font/NanumGgocNaeEum.ttf');
+      }
+
+      * {
+        font-family: 'NanumGN', 'Times New Roman', Times, serif;
+      }
+
+      #wrap {
+        width: 600px;
+        margin: 0 auto;
+        border: 1px solid gray;
+        height: 400px;
+        text-align: center;
+      }
+
+      #wrap #content {
+        border: 1px solid lightcoral;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        background: url('./ch05_img/sulhyun.jpg') center no-repeat;
+        background-size: 120%; /* div 가로 사이즈 기준으로 120% 확대*/
+        font-size: 3em;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="content">설현?</div>
+    </div>
+  </body>
+</html>

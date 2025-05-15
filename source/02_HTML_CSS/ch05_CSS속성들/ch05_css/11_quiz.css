@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  display: block;
+}
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* header 시작 */
+#header {
+  /* background-color: yellow; */
+  width: 100%;
+  height: 50px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 5px;
+}
+#header h1 {
+  font-size: 20px;
+}
+/* header 끝 */
+
+/* nav 시작 */
+#nav {
+  border: 1px solid gray;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+#nav > p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#nav > ul {
+  overflow: hidden;
+}
+
+#nav > ul > li {
+  float: left;
+  list-style: none;
+  background-color: red;
+  opacity: 0.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 18.63%;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+#nav > ul > li:first-child {
+  margin-left: 30px;
+  margin-right: 2px;
+  border-radius: 10px 0 0 10px;
+}
+#nav > ul > li:nth-child(2),
+#nav > ul > li:nth-child(3),
+#nav > ul > li:nth-child(4) {
+  margin-right: 2px;
+}
+
+#nav > ul > li:last-child {
+  margin-right: 30px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* nav 끝 */
+
+/* section 시작 */
+#section {
+  border: 1px solid gray;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* content 시작 */
+#section > #content {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  float: left;
+  margin-right: 5px;
+  width: 800px;
+  height: 500px;
+}
+
+#section > #content p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+/* content 끝 */
+
+/* banner 시작 */
+#section > #banner {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  float: left;
+  width: 183px;
+  height: 500px;
+}
+
+#section > #banner p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+/* banner 끝 */
+/* section 끝 */
+
+/* footer 시작 */
+#footer {
+  /* background-color: yellow; */
+  width: 100%;
+  height: 50px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+}
+#footer h1 {
+  font-size: 20px;
+}
+/* footer 끝 */
+
+/* background_image 시작 */
+#container > #background_image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../ch05_img/sulhyun.jpg);
+  background-size: 100%;
+  z-index: -99999;
+  opacity: 0.2;
+}
+/* background_image 끝 */

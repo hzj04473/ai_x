@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_단위들</title>
+    <style>
+      #wrap {
+        width: 600px;
+        margin: 0 auto;
+        border: 1px solid gray;
+        text-align: justify;
+        padding: 10px;
+      }
+
+      #wrap p:nth-child(2n) {
+        background-color: lightblue;
+      }
+
+      /* 
+      - em(월 글씨크기의 몇배),  
+      - % (글씨 크기 및 width, height,... 몇배)
+      - px, 
+      - pt (3pt가 4px)
+
+      px to em : 
+      px to pt : 
+      */
+      /* 입력일 */
+      #wrap p > span {
+        display: block; /* display 속성을 block으로 수정하면 block형 태그로 전환 */
+        color: gray;
+        font-size: 0.5em;
+      }
+      /* 입력일 */
+
+      #wrap p:nth-child(1) {
+        font-size: 0.8em; /* 원래 사이즈의 0.8배 */
+      }
+      #wrap p:nth-child(2) {
+        font-size: 100%; /* 원래 사이즈의 몇 % */
+        /* width, height, padding, margin 등의 경우 : 부모길이의 몇 % */
+      }
+
+      #wrap p:nth-child(3) {
+        font-size: 32px;
+      }
+
+      #wrap p:nth-child(4) {
+        font-size: 24pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti reiciendis unde
+        sunt voluptatum repudiandae qui earum nisi! Porro, quidem vero! Necessitatibus sequi quo aut
+        commodi nam aperiam aspernatur unde? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Necessitatibus minima, pariatur consequuntur vero similique veniam officiis
+        dignissimos debitis esse assumenda, mollitia velit voluptate exercitationem enim sed ut!
+        Fugiat, corporis ea.
+        <span>입력2025.05.14 오전 9:46</span>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti reiciendis unde
+        sunt voluptatum repudiandae qui earum nisi! Porro, quidem vero! Necessitatibus sequi quo aut
+        commodi nam aperiam aspernatur unde? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Necessitatibus minima, pariatur consequuntur vero similique veniam officiis
+        dignissimos debitis esse assumenda, mollitia velit voluptate exercitationem enim sed ut!
+        Fugiat, corporis ea.
+        <span>입력2025.05.14 오전 9:46</span>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti reiciendis unde
+        sunt voluptatum repudiandae qui earum nisi! Porro, quidem vero! Necessitatibus sequi quo aut
+        commodi nam aperiam aspernatur unde? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Necessitatibus minima, pariatur consequuntur vero similique veniam officiis
+        dignissimos debitis esse assumenda, mollitia velit voluptate exercitationem enim sed ut!
+        Fugiat, corporis ea.
+        <span>입력2025.05.14 오전 9:46</span>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti reiciendis unde
+        sunt voluptatum repudiandae qui earum nisi! Porro, quidem vero! Necessitatibus sequi quo aut
+        commodi nam aperiam aspernatur unde? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Necessitatibus minima, pariatur consequuntur vero similique veniam officiis
+        dignissimos debitis esse assumenda, mollitia velit voluptate exercitationem enim sed ut!
+        Fugiat, corporis ea.
+        <span>입력2025.05.14 오전 9:46</span>
+      </p>
+    </div>
+  </body>
+</html>
