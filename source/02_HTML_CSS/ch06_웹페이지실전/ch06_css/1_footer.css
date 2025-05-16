@@ -1,0 +1,58 @@
+/* css/footer.css  */
+footer {
+  clear: both;
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+footer > div:nth-child(1),
+footer > div:nth-child(2),
+footer > div:nth-child(3) {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px 10px;
+  height: 100px;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+footer > div:nth-child(1):hover,
+footer > div:nth-child(2):hover,
+footer > div:nth-child(3):hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+footer > div.offce_log {
+  float: left;
+  width: 33.3%;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+footer > div.office_address {
+  float: left;
+  width: 33.3%;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+footer > div.shopping_info {
+  float: left;
+  width: 33.3%;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  /* margin-bottom: 10px; */
+}
+
+footer > div.copyright {
+  clear: both;
+  background-color: #000;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  box-sizing: border-box;
+}

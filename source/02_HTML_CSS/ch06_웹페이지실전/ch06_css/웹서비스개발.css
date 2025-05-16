@@ -1,0 +1,165 @@
+/* css 소스 */
+
+/* css 조기화 시작 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+/* css 조기화 끝 */
+
+/* wrap 시작 */
+div#wrap {
+  width: 1000px;
+  margin: 0 auto;
+  /* border: 1px solid yellow; */
+}
+
+/* nav 시작 */
+
+#wrap > nav {
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/* nav_left 시작 */
+#wrap > nav > div#nav_left ul li {
+  float: left;
+  width: 10%;
+  height: 30px;
+  margin: 0 1%;
+  box-sizing: border-box;
+  /* border: 1px solid yellow; */
+  text-align: center;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+#wrap > nav > div#nav_left ul li:first-child {
+  margin-left: 0;
+  border: 1px solid #ddd;
+  background-color: #fdeada;
+}
+
+/* nav_left 끝 */
+
+/* nav_right 시작 */
+
+#wrap > nav > div#nav_right ul li {
+  float: right;
+  width: 10%;
+  margin: 0 1%;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+  text-align: right;
+  font-weight: 400;
+}
+/* nav_right 끝 */
+
+/* content 시작 */
+#content {
+  clear: both;
+  overflow: hidden;
+}
+
+#content > div#title {
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* lnb 시작 */
+#content > div#lnb {
+  width: 200px;
+  float: left;
+  margin: 5px;
+}
+
+#content > div#lnb ul {
+  border: 1px solid #ddd;
+}
+
+#content > div#lnb ul li {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+}
+
+#content > div#lnb ul li:nth-child(4) {
+  background-color: #fdeada;
+}
+/* lnb 끝 */
+
+/* my_content 시작 */
+#content > div#my_content {
+  width: 778px;
+  float: left;
+  margin: 5px 5px 15px 5px;
+  border: 1px solid #ddd;
+}
+
+#content > div#my_content > div#sub_title {
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-weight: 800;
+}
+
+#content > div#my_content > div#modify {
+  margin: 20px 50px;
+}
+
+#content > div#my_content > div#modify table {
+  /* background-color: red; */
+  width: 100%;
+}
+#content > div#my_content > div#modify table td {
+  text-align: center;
+  height: 30px;
+}
+
+#content > div#my_content > div#modify table td:nth-child(1) {
+  width: 200px;
+}
+
+#content > div#my_content > div#modify table td:nth-child(1) label {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+
+#content > div#my_content > div#modify table td:nth-child(2) > input:nth-child(1) {
+  width: 80%;
+  height: 20px;
+}
+
+#content > div#my_content > div#modify table td:nth-child(1) > input[type='submit'] {
+  margin-top: 50px;
+  width: 10%;
+  height: 30px;
+}
+
+/* my_content 끝 */
+
+/* content 끝 */
+
+/* footer */
+#footer {
+  clear: both;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #fdeada;
+  padding: 5px 0;
+}
+/* wrap 끝 */

@@ -1,0 +1,190 @@
+/* css/header.css : 페이지 초기화, header 부분 */
+
+/* 초기화 설정 */
+/* FONT 설정 시작 */
+@font-face {
+  font-family: 'Merriweather-Light';
+  src: url(../ch06_font/Merriweather-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Merriweather-Regular';
+  src: url(../ch06_font/Merriweather-Regular.ttf);
+}
+/* FONT 설정 끝 */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Merriweather-Regular', 'Courier New', Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+/* 초기화 설정 */
+
+/*  gnb 시작 */
+header div.gnb {
+  min-width: 1000px;
+  height: 30px;
+  background-color: black;
+}
+
+header div.gnb > ul {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header div.gnb > ul li {
+  float: left;
+  color: #fff;
+  /* width: 80px; */
+  width: 8%;
+  height: 30px;
+  /* margin: 0 10px; */
+  margin: 0 1%;
+  /* border: 1px solid yellow; */
+  line-height: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 13px;
+}
+
+header div.gnb > ul li a {
+  color: #fff;
+}
+
+header div.gnb > ul li a:hover {
+  background-color: #efefef;
+  color: #000;
+}
+
+/*  gnb 끝 */
+
+/* logo 시작 */
+header div.logo {
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header div.logo > h1:hover::before {
+  content: 'Hi ';
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header div.logo > h1:hover::after {
+  content: ' Yep';
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header div.logo > h1 {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border: 1px solid gray;
+  font-family: 'Playwrite DK Loopet', cursive;
+  font-optical-sizing: auto;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* logo 끝 */
+
+/* hitmemu 시작 */
+header div.hitmemu {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header div.hitmemu > ul {
+  overflow: hidden;
+}
+
+header div.hitmemu > ul li {
+  float: right;
+  list-style: none;
+  border: 1px solid gray;
+  /* width: 90px; */
+  /* height: 50px; */
+  /* padding: 10px 15px; */
+  font-family: 'Merriweather-Light', 'Times New Roman', Times, serif;
+  /* line-height: 50px; */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header div.hitmemu > ul li a {
+  padding: 10px 30px;
+}
+
+header div.hitmemu > ul li a:hover {
+  background-color: #efefef;
+  color: #000;
+}
+
+header div.hitmemu > ul li:last-child {
+  border-radius: 10px 0 0 10px;
+}
+
+header div.hitmemu > ul li:last-child a:hover {
+  border-radius: 10px 0 0 10px;
+  background-color: #efefef;
+  color: #000;
+}
+
+header div.hitmemu > ul li:first-child {
+  border-radius: 0 10px 10px 0;
+}
+
+header div.hitmemu > ul li:first-child a:hover {
+  border-radius: 0 10px 10px 0;
+  background-color: #efefef;
+  color: #000;
+}
+/* hitmemu 끝 */
+
+/* lnb 시작 */
+header div.lnb {
+  clear: both;
+  margin: 0.8% 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+}
+header div.lnb > ul {
+  margin: 0 auto;
+  width: 1000px;
+  height: 30px;
+  overflow: hidden;
+}
+
+header div.lnb > ul li {
+  float: left;
+  width: 10.5%;
+  margin: 0 1%;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header div.lnb > ul li a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* lnb 끝 */
