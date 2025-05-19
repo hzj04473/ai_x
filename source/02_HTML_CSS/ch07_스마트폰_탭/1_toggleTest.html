@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toggletest</title>
+    <style>
+      body {
+        background-color: orange;
+      }
+
+      div {
+        background-color: violet;
+        display: none; /* 공간도 화면에서 사라짐 */
+      }
+
+      #toggle:checked ~ div {
+        display: block;
+      }
+
+      #toggle {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggle" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias sint qui voluptates
+      similique vitae cumque porro nihil corrupti error nemo officiis dolores, consequuntur dicta
+      ipsum, ut saepe nostrum ad!
+    </p>
+    <label for="toggle">
+      <img src="./ch07_img/menu.png" alt="menu.png" />
+    </label>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nam, necessitatibus nisi
+      voluptatum modi dignissimos ad eum, repellendus accusamus totam omnis provident quidem et,
+      quasi asperiores rem assumenda minus sint? Soluta non a error quas accusamus nobis labore
+      incidunt quasi cumque at. Magni atque maxime sapiente modi, aliquid laudantium totam nulla ex
+      maiores iure temporibus quasi harum. Esse, eveniet minima! Sed quas deserunt a magni quisquam
+      ratione quam, repudiandae neque eaque ipsam aut iure est, debitis facilis molestiae ullam
+      maiores eum? Cumque ipsam debitis temporibus corporis in unde est optio.
+    </p>
+    <div>토글부분(메뉴가 나타났다 사라졌다 하는 부분)</div>
+  </body>
+</html>

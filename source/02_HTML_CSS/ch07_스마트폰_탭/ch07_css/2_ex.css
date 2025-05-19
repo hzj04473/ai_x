@@ -1,0 +1,222 @@
+/* user-scalable=no 의 확대방지가 100% 보장되지 않음 */
+/* body {
+        touch-action: none;
+        overflow: hiddle;
+      } */
+/* ! 페이지 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: navy;
+}
+
+/* ! 페이지 초기화 */
+
+/* header 시작 */
+header {
+  background-color: #ea8f00;
+  height: 100px;
+}
+
+/* ? header #logo_wrap 시작 */
+header #logo_wrap {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+header #logo_wrap .menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header #logo_wrap .logo {
+  color: white;
+  font-size: 1.56em;
+  font-weight: bold;
+}
+header #logo_wrap .myinfo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* ? header #logo_wrap 끝 */
+
+/* ? header #search 시작 */
+header #search {
+  height: 50px;
+  position: relative;
+  /* line-height: 50px; */
+  /* text-align: center; */
+}
+header #search input[type='text'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ea8f00;
+  outline: 0; /* 커서 focus시 라인 색 */
+  box-sizing: border-box;
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+header #search input[type='text']:focus {
+  border: 3px solid #ea8f00;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  padding: 5px 55px 5px 10px;
+}
+
+header #search input[type='submit'] {
+  width: 50px;
+  height: 50px;
+  background: url('../ch07_img/search.png') center no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+}
+
+/* ? header #search 끝 */
+
+/* header 끝 */
+
+/* #lnb 시작 */
+#lnb {
+  margin: 7px 0;
+  overflow: hidden;
+  display: none;
+}
+
+#lnb li {
+  float: left;
+  width: 16.6%;
+  border-right: 1px solid #ea8f00;
+  box-sizing: border-box;
+  line-height: 30px;
+  text-align: center;
+}
+
+#lnb li:last-child {
+  border-right: 0;
+}
+/* #lnb 끝 */
+
+/* ? toogle 시작 */
+#toggle:checked ~ #lnb {
+  display: block;
+}
+
+#toggle {
+  display: none;
+}
+/* ? toogle 끝 */
+
+/* #section1 시작 */
+section #section1 {
+  margin: 7px 0;
+}
+
+section #section1 .row1,
+section #section1 .row2,
+section #section1 .row3 {
+  overflow: hidden;
+}
+
+section #section1 .row1 > div,
+section #section1 .row2 > div,
+section #section1 .row3 > div {
+  float: left;
+  width: 50%;
+  height: 120px;
+  box-sizing: border-box;
+  border: 2px solid #efefef;
+}
+
+#section1 img {
+  width: 100%;
+  height: 120px;
+  object-fit: fill; /* 높이가 120px 이하일 경우, 120px을 다 채우라는 뜻*/
+}
+/* #section1 끝 */
+
+/* #section2 시작 */
+#section2 {
+  margin: 7px;
+}
+
+#section2 ul li a {
+  border: 1px solid #ddd;
+  padding: 7px;
+  /* 말줄임 태그(ellipsis) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* #section2 끝 */
+
+/* #section3 시작 */
+section #section3 {
+  margin: 7px 0;
+}
+
+section #section3 ul li {
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 7px;
+  position: relative;
+  height: 100px;
+}
+
+section #section3 ul li a p.img {
+  /* position 으로 배치 */
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+section #section3 ul li a p.txt {
+  /* 100% 사용(padding-left를 120px) */
+  padding-left: 120px;
+}
+
+section #section3 ul li a p.txt span:first-child {
+  /* 말줄임 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: navy;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* #section3 끝 */
+
+/* #footer 시작 */
+footer {
+  background-color: #ea8f00;
+  text-align: center;
+}
+
+footer p:last-child {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color: #222;
+}
+/* footer 끝 */
