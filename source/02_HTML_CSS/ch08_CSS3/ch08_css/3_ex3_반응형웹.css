@@ -1,0 +1,101 @@
+/* 페이지 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-weight: blod;
+}
+
+/* 공통 */
+#wrap {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+#wrap #header {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#wrap #nav ul {
+  overflow: hidden;
+}
+
+#wrap #nav ul li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#content {
+  padding: 10px;
+}
+
+#footer {
+  line-height: 100px;
+  text-align: center;
+  background-color: lightgrey;
+}
+/* PC 용 */
+@media screen and (min-width: 1501px) {
+  #wrap {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  #wrap #nav ul li {
+    width: 20%;
+    /* padding: 10%; */
+  }
+}
+
+/* tab 용 */
+@media screen and (min-width: 1001px) and (max-width: 1500px) {
+  #wrap {
+    width: 99%;
+    margin: 0.5%;
+    background-color: lightgreen;
+    font-size: 1.1em;
+  }
+
+  #wrap #nav ul li {
+    width: 25%;
+  }
+
+  #wrap #nav ul li:nth-child(4) {
+    display: none;
+  }
+}
+
+/* phone 용 */
+@media screen and (max-width: 1000px) {
+  #wrap {
+    background-color: lightpink;
+    font-size: 1.2em;
+  }
+
+  #wrap #nav ul li {
+    width: 33.3%;
+  }
+
+  #wrap #nav ul li:nth-child(2),
+  #wrap #nav ul li:nth-child(4) {
+    display: none;
+  }
+}
