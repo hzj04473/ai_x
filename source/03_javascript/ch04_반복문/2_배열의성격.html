@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_배열의성격</title>
+    <script>
+      // 자바스크립트에서의 배열의 크기가 가변적. 자료형의 집합.
+      var arr = [
+        2,
+        4,
+        '홍길동',
+        true,
+        function () {
+          alert(1);
+        },
+        [1, 2],
+      ];
+      document.write(`arr 타입 : ${typeof arr} / 값 : ${arr} <br>`);
+      document.write(`arr 방의 갯수 : ${arr.length} <br>`);
+      document.write(`0 번쨰  : ${arr[0]} <br>`);
+      document.write(`1 번쨰  : ${arr[1]} <br>`);
+      document.write(`2 번쨰  : ${arr[2]} <br>`);
+      document.write(`3 번쨰  : ${arr[3]} <br>`);
+      document.write(`4 번쨰  : ${arr[4]} <br>`);
+      document.write(`5 번쨰  : ${arr[5]} <br>`);
+
+      arr.push('6번 인덱스 값 추가');
+      document.write(`arr 타입 : ${typeof arr} / 값 : ${arr} <br>`);
+      document.write(`arr 방의 갯수 : ${arr.length} <br>`);
+
+      var deleteValue = arr.pop(); // arr배열의 마지막 인덱스 값을 return 하고 배열에서 삭제
+      var deleteValue = arr.pop(); // arr배열의 마지막 인덱스 값을 return 하고 배열에서 삭제
+      var deleteValue = arr.pop(); // arr배열의 마지막 인덱스 값을 return 하고 배열에서 삭제
+      document.write(`arr 타입 : ${typeof arr} / 값 : ${arr} <br>`);
+      document.write(`arr 방의 갯수 : ${arr.length} <br>`);
+
+      document.write(`<hr color="red" />`);
+
+      document.write(`for 문<br />`);
+      for (let i = 0; i < arr.length; i++) {
+        document.write(`${arr[i]}<br/>`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

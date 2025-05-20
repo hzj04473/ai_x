@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5_prompt</title>
+    <script>
+      let scoreStr = prompt('점수를 입력하세요', 0); // 취소 :  null, 확인 : 입력된 값 (문자)
+      // document.write(`scoreStr : ${scoreStr} - 타입 ${typeof scoreStr}`);
+
+      // if (scoreStr != null) {
+      if (!scoreStr) {
+        // string number 형변환 1.Number() / 형변환불가일 경우 NaN / '' 나 ' ' 일 경우 0
+        let score = Number(scoreStr);
+        // string을 number로 형변환 2. parseInt() : 형변환불사일 경우 NaN / '' 나 ' ' 일 경우도 NaN, 10점 -> 10
+        score = parseInt(scoreStr);
+        // document.write(`score = ${score} - 타입 = ${typeof score}`);
+
+        if (isNaN(score)) {
+          // score가 NaN 인지 여부
+          alert('정수를 입력하세요.');
+        } else {
+          // if (score >= 90) {
+          //   result = '참 잘하셨습니다.';
+          // } else {
+          //   result = '분발하세요.';
+          // }
+          result = score >= 90 ? '참 잘하셨습니다.' : '분발하세요.';
+          document.write(result);
+        }
+      } else {
+        alert('정수를 입력하시라니까?');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

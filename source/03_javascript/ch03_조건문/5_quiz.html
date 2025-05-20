@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5_quiz</title>
+    <style>
+      #wrap {
+        width: 600px;
+        margin: 50px auto;
+        /* background-color: antiquewhite; */
+        border: 1px solid #ddd;
+      }
+
+      #content table {
+        /* border: 1px solid yellow; */
+        margin: 50px;
+        width: 500px;
+        box-sizing: border-box;
+      }
+      #content table td:first-child {
+        height: 50px;
+        width: 100px;
+        text-align: center;
+        /* background-color: aquamarine; */
+      }
+
+      #content table td:last-child {
+        height: 50px;
+        width: 400px;
+        text-align: center;
+        /* background-color: aquamarine; */
+      }
+
+      #content table td > input[type='number'] {
+        height: 30px;
+        width: 350px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #content table td > input[type='submit'] {
+        height: 30px;
+        width: 200px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    </style>
+    <script>
+      // ※ QUIZ : 두 수를 input 상자를 통해 제대로 입력 받았는지 체크하고, 첫째 입력수가 더 큰지 둘째 입력한 수가 더 큰지 경고 메시지를 표시하는 자바스크립을 구현하시오.
+      // (submit이 이루어지지 않고 메시지 출력)
+
+      function chk() {
+        let temp = '';
+
+        // document.body.innerHTML += temp;
+        // console.log(frm.first.value);
+        // console.log(frm.second.value);
+
+        first = parseInt(frm.first.value);
+        second = parseInt(frm.second.value);
+
+        if (!first || first < 0 || isNaN(first)) {
+          alert('첫번째 입력수를 입력하여 주세요.\n정수(0보다 큰수)만 입력해 주세요.');
+          frm.first.value = '';
+          frm.first.focus();
+          return false;
+        }
+
+        if (!second || second < 0 || isNaN(second)) {
+          alert('두번째 입력수를 입력하여 주세요.\n정수(0보다 큰수)만 입력해 주세요.');
+          frm.second.value = '';
+          frm.second.focus();
+          return false;
+        }
+
+        result =
+          first > second
+            ? '첫번째수가 ' + (first - second) + ' 큽니다.'
+            : first == second
+            ? '첫번째수와 두번째수가 같습니다.'
+            : '두번째 수가 ' + (second - first) + ' 큽니다.';
+        // console.log(result);
+
+        temp += `<h2>${result}</h2>`;
+
+        document.body.innerHTML += temp;
+
+        frm.first.value = first;
+        frm.second.value = second;
+
+        alert(result.replace(' 큽니다.', '만큼 더 크다.'));
+
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="content">
+        <form action="#" name="frm" onsubmit="return chk()">
+          <table>
+            <tr>
+              <td>첫번째수</td>
+              <td><input type="number" name="first" id="first" /></td>
+            </tr>
+            <tr>
+              <td>두번째수</td>
+              <td><input type="number" name="second" id="second" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="결과" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
