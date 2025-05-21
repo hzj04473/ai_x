@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4_특정구구단</title>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+      table tr td:last-child {
+        text-align: right;
+      }
+    </style>
+    <script>
+      // prompt 함수를 이용하여, 원하는 구구단을 입력받아 해당 구구단 출력
+      let su;
+      do {
+        su = 2;
+        // su = parseInt(prompt('몇단 구구단을 할려줄까요? (2단부터 ~ 9단까지만)'));
+      } while (isNaN(su) || su < 2 || su > 9);
+      // 해당 구구단 출력하기 for문 x1부터 x9까지 출력
+      document.write('<table>');
+      for (let i = 1; i < 10; i++) {
+        document.write(`<tr>`);
+        document.write(`<td>${su} * ${i} =</td>`);
+        document.write(`<td>${su * i}</td>`);
+        document.write(`</tr>`);
+      }
+      document.write('</table>');
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // <QUIZ> “누적할래?”confirm창에 “취소”를 입력할 때까지 점수(0~100점 사이)를 입력받는다.
+      let cnt = '0'; // 누적횟수
+
+      let right = 0; // 유효한 점수를 입력할 횟수
+      let wrong = 0; // 유효하지 않은 점수를 입력학 횟수
+
+      let sum = 0; // 점수 누적
+      let isLoop = false;
+
+      isLoop = confirm('누적할래?');
+
+      while (isLoop) {
+        ++cnt;
+        // 값 입력
+        numberStr = prompt('누적할 점수는?'); // 10.5abc
+
+        // 값 ParseFloat로 변환
+        number = parseFloat(numberStr); // null, '',' '이면 0/실수입력시 parseInt는 정수로
+
+        // number = number;
+        // console.log(
+        //   `${typeof number}, ${number}, numberStr : ${numberStr}, String(number) : ${String(
+        //     number
+        //   )}`
+        // );
+
+        // ! 이 부분... 체크 ***
+        if (numberStr == null) {
+          break;
+        }
+
+        if (!isNaN(number) && number >= 0.0 && number <= 100.0 && numberStr == String(number)) {
+          sum += number;
+          right++;
+          // console.log(`wrong : ${wrong}, right : ${right} , sum : ${sum}`);
+        } else {
+          wrong++;
+          // console.log(`wrong : ${wrong}, right : ${right} , sum : ${sum}`);
+        }
+        // cnt = wrong + right;
+      }
+
+      document.write(`${cnt} 번 입력<br />`);
+      document.write(`누적점수 : ${sum}<br />`);
+      document.write(`유효한 점수를 입력할 횟수 : ${right}<br />`);
+      document.write(`유효하지 않은 점수를 입력학 횟수 : ${wrong} 번<br />`);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_익명함수</title>
+    <script>
+      let i = 10;
+      document.write(`i = ${i} <br />`);
+      i = 20;
+      document.write(`i = ${i} <br />`);
+      // functionVar(10, 20); // 익명함수는 정의 전에 사용 불가
+
+      let functionVar = function (i, j) {
+        alert(`함수 표현식 test i=${i}, j=${j}`);
+      }; // 익명함수의 정의
+
+      functionVar(100, 200);
+
+      // 화살표 함수
+      functionVar = (i, j) => {
+        // 함수를 재정의 후 호출시, 재정의된 함수로 실행
+        alert(`화살표 함수 : 수정된 함수 test i=${i}, j=${j}`);
+      };
+
+      functionVar(99, 9);
+
+      // var functionVar = function() { }; // 함수 표현식
+      // var functionVar = () => {}; // 화살표 함수
+
+      // 매개변수 지정 방법
+      // () => { . . . } // 매개변수가 없을 경우
+      // x =>{ . . . } //매개변수가 한 개인 경우, 소괄호를 생략할 수 있다
+      // (x, y) => { . . . } // 매개변수가 2개이상인 경우, 소괄호를 생략할 수 없다
+
+      // 함수 몸체 지정 방법
+      // x => { return x*x } // single line block
+      // x => x * x         // 함수 몸체가 한줄의 return 구문이라면 중괄호 생략 가능
+      // () => { return { a: 1 }; }
+      // () => ({ a: 1 })  // 위 표현과 동일하다. 객체 반환시 소괄호를 사용한다.
+
+      // () => {           // multi line block.
+      //   const x = 10;
+      //   return x * x;
+      // };
+      // https://poiemaweb.com/es6-arrow-function에서 참조바람
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3_배열출력</title>
+    <script>
+      var arr = [273, 32, '홍길동']; // {0:273, 1:32, 2:'홍길동'}
+      // var person = { name: '홍길동', age: 20 };
+      // 1. 일반 for문
+      document.write('<h3>1. 일반for문 이용</h3>');
+      // document.write(`0번쨰 : ${<arr 0=""></arr>}<br />`);
+      // document.write(`1번쨰 : ${arr[1]}<br />`);
+      // document.write(`2번쨰 : ${arr[2]}<br />`);
+      for (let idx = 0; idx < arr.length; idx++) {
+        document.write(`${idx}번쨰 : ${arr[idx]}<br />`);
+      }
+
+      // 2. for ~ in 문 (배열이나 객체에서 이용)
+      document.write('<h3>2. for ~ in 문 이용</h3>');
+
+      for (let idx in arr) {
+        document.write(`${idx}번쨰 : ${arr[idx]}<br />`);
+      }
+
+      // 3. for ~ of 문 (배열이나 객체에서 이용)
+      document.write('<h3>3. for ~ of 문 이용</h3>');
+
+      for (let data of arr) {
+        document.write(`${data}<br />`);
+      }
+
+      // 4. forEach 함수 1
+      document.write('<h3>4. forEach 함수 1</h3>');
+      // 배열변수 : arr
+      // data : 273, 32, '홍길동'
+      // idx : 0,    1,    2
+      arr.forEach((data, idx) => {
+        document.write(`${idx}번쨰 : ${data}<br />`);
+      });
+
+      // 5. forEach 함수 2 (idx 안 씀)
+      document.write('<h3>5. forEach 함수 2 (idx 안 씀)</h3>');
+
+      arr.forEach((data) => {
+        document.write(`${data}<br />`);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
