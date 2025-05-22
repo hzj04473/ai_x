@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4_toString</title>
+    <script src="./4_toString.js"></script>
+    <script>
+      document.write(person);
+      alert(person.toString().replaceAll('<br />', '\n'));
+
+      person.address = '서울시';
+      person.hobby = '열공';
+
+      document.write(person);
+
+      alert(person.toString().replaceAll('<br />', '\n'));
+    </script>
+  </head>
+  <body></body>
+</html>

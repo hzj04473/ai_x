@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6_객체생성함수</title>
+    <script>
+      // # 객체생성함수(지금 해야 할 것)
+      // ➡ 7장 생성자 함수
+      // ➡ 8장 class
+
+      // 객체생성함수 ➡ return 하는 함수
+      const makeStudent = (name, kor, mat, eng, sci) => {
+        let resultObj = {
+          name: name,
+          kor: kor,
+          mat: mat,
+          eng: eng,
+          sci: sci,
+          getSum: function () {
+            return this.kor + this.mat + this.eng + this.sci;
+          },
+          getAvg: function () {
+            return this.getSum() / 4;
+          },
+          toString: function () {
+            let outPut = '';
+            for (let key in this) {
+              if (key !== 'toString' && key !== 'getSum' && key !== 'getAvg') {
+                outPut += `${key} : ${this[key]} `;
+              } else if (key === 'getSum') {
+                // ${key.substring(3)} 은 Sum
+                outPut += `${key.substring(3).toLowerCase()} : ${this[key]()} `;
+              } else if (key === 'getAvg') {
+                // ${key.substring(3)} 은 Avg
+                outPut += `${key.substring(3).toLowerCase()} : ${this[key]()} \n`;
+              }
+            }
+            return outPut;
+          },
+        };
+        return resultObj;
+      };
+
+      students = [
+        makeStudent('홍', 90, 99, 80, 95),
+        makeStudent('김', 99, 95, 88, 70),
+        makeStudent('유', 90, 95, 88, 70),
+      ];
+      // document.write(students);
+      students.forEach((data, idx) => document.write(`${idx}. ${data}<br />`));
+    </script>
+  </head>
+  <body></body>
+</html>

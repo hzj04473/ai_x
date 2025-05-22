@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5_객체배열</title>
+    <script src="./5_객체배열.js"></script>
+    <script>
+      alert(out);
+      document.write(out.toString().replaceAll('\n', '<br />'));
+
+      // 화면 출력
+      document.write('<h3>for ~ in</h3>');
+      for (let idx in students) {
+        document.write(`${idx}. ${students[idx]}<br />`);
+      }
+
+      document.write('<h3>for ~ of</h3>');
+      for (let student of students) {
+        document.write(`${student}<br />`);
+      }
+
+      document.write('<h3>forEach - 1</h3>');
+      students.forEach((student, idx) => document.write(`${idx}. ${student}<br />`));
+
+      document.write('<h3>forEach - 2</h3>');
+      students.forEach((student) => document.write(`${student}<br />`));
+    </script>
+  </head>
+  <body></body>
+</html>
