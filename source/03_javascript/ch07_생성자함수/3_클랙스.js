@@ -14,13 +14,7 @@ class Student {
   }
 
   toString() {
-    return `name:${this.name} 
-      kor:${this.kor} 
-      mat:${this.mat} 
-      eng:${this.eng} 
-      sci:${this.sci} 
-      sum:${this.getSum()} 
-      avg:${this.getAvg()}`;
+    return `name: ${this.name} kor: ${this.kor} mat: ${this.mat} eng: ${this.eng} sci: ${this.sci} sum: ${this.getSum()} avg: ${this.getAvg()}`;
   }
 }
 
