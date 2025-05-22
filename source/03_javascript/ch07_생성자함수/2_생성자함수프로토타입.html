@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_생성자함수</title>
+    <script>
+      // 생성자함수
+      function Student(name, kor, mat, eng, sci) {
+        this.name = name;
+        this.kor = kor;
+        this.mat = mat;
+        this.eng = eng;
+        this.sci = sci;
+      }
+
+      // Student 타입의 함수를 ptototype에 추가
+      Student.prototype.getSum = function () {
+        return this.kor + this.mat + this.eng + this.sci;
+      };
+
+      Student.prototype.getAvg = function () {
+        return this.getSum() / 4;
+      };
+
+      Student.prototype.toString = function () {
+        let outPut = '';
+        for (let key in this) {
+          if (key !== 'toString' && key !== 'getSum' && key !== 'getAvg') {
+            outPut += `${key} : ${this[key]} `;
+          } else if (key === 'getSum') {
+            // ${key.substring(3)} 은 Sum
+            outPut += `${key.substring(3).toLowerCase()} : ${this[key]()} `;
+          } else if (key === 'getAvg') {
+            // ${key.substring(3)} 은 Avg
+            outPut += `${key.substring(3).toLowerCase()} : ${this[key]()} \n`;
+          }
+        }
+        return outPut;
+      };
+
+      let student = [];
+
+      student.push(new Student('홍', 99, 99, 99, 99));
+      student.push(new Student('김', 91, 95, 99, 99));
+      student.push(new Student('백', 99, 99, 99, 19));
+
+      student.forEach((data, idx) => document.write(`${idx} : ${data}<br />`));
+    </script>
+  </head>
+  <body></body>
+</html>
