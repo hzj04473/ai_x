@@ -4,24 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      h1 {
-        color: #fff;
-      }
-    </style>
     <script>
       // Quiz : 1초마다 10초동안 body의 백그라운드 이미지가 바뀌고 시간이 출력되도록 자바스크립트로 구현 후, yisy0703@naver.com으로 html파일을 첨부하시오.
       let cnt = 0;
-
+      let changeCnt = 0;
       let img = ['img01.png', 'img02.png', 'img03.png'];
       let color = ['#ff0000', '#00ff00', '#0000ff'];
 
       let chTime = setInterval(() => {
-        document.body.bgColor = `${color[cnt]}`;
-        document.body.style = `background-image : url("./ch05_img/${img[cnt]}");background-repeat: no-repeat;background-size: cover;`;
-        document.body.innerHTML = `<h1>${cnt} / ${new Date()}</h1>`;
+        document.body.style = `background-image : url("./ch05_img/${img[changeCnt]}");background-repeat: no-repeat;background-size: cover;`;
+        document.body.innerHTML = `
+          <h1 style='color:${color[changeCnt]}'>${new Date()}</h1>
+          <h2 style="color:${color[changeCnt]}">${cnt++} 초 지남</h2>
+        `;
 
-        cnt = (cnt + 1) % 3;
+        changeCnt = (cnt + 1) % 3;
       }, 1000);
 
       setTimeout(() => {
