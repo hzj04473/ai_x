@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_문서객체인식방법5-선택자</title>
+    <script>
+      window.onload = () => {
+        let header1 = document.querySelector('h1.header'); // 방법5. 첫번쨰 해당 선택자 하나만
+        console.log(header1);
+        header1.innerHTML = '첫번째만';
+
+        let header2 = document.querySelectorAll('h1.header'); // 방법6. 해당선택자 다 배열로
+        console.log(header2);
+        color = ['red', 'orange'];
+
+        for (let idx = 0; idx < header2.length; idx++) {
+          header2[idx].style.backgroundColor = color[idx];
+          // header2[idx].style = `background-color:${color[idx]}`;
+        }
+
+        let input = document.querySelector('input[type="text"]');
+        console.log(input);
+        msg = '즐거운 주말 보내세요. 월요일에 꼭 봐요';
+        console.log(msg.length);
+        input.value = msg;
+        // input.setAttribute('size', msg.length * 5);
+        input.style.width = msg.length;
+      };
+    </script>
+  </head>
+  <body>
+    <h1 class="header">HEADER1</h1>
+    <h1 class="header">HEADER2</h1>
+    <input type="text" name="param" />
+  </body>
+</html>

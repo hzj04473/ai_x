@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_문서객체인식방법3-naame</title>
+    <script>
+      // let form;
+      // window.onload = () => {
+      //   form = document.getElementsByTagName('form');
+      // };
+
+      const chk = function () {
+        console.log('1111');
+        let id = document.getElementsByName('id')[0];
+        let pw = document.getElementsByName('pw')[0];
+        let gender = document.getElementsByName('gender'); // 배열
+
+        // console.log(gender[0]);
+        if (!id.value.trim()) {
+          alert('아이디를 입력하세요.');
+          id.focus();
+          return false;
+        }
+
+        if (!pw.value.trim()) {
+          alert('비밀번호를 입력하세요.');
+          pw.focus();
+          return false;
+        }
+        if (!gender[0].checked && !gender[1].checked) {
+          alert('성별을 체크해주세요.');
+          return false;
+        }
+        if (gender[0].checked) {
+          alert(`남자 : ${id.value} 님 비번은 ${pw.value}`);
+        }
+
+        if (gender[1].checked) {
+          alert(`여자 : ${id.value} 님 비번은 ${pw.value}`);
+        }
+        return false;
+      };
+    </script>
+  </head>
+  <body>
+    <form action="" method="get" onsubmit="return chk();">
+      <p>ID <input type="text" name="id" /></p>
+      <p>PASS <input type="password" name="pw" /></p>
+      <p>
+        성별
+        <input type="radio" name="gender" value="m" /><label for="genderM">남</label>
+        /
+        <input type="radio" name="gender" value="f" /><label for="genderF">여</label>
+      </p>
+      <p><input type="submit" /></p>
+    </form>
+  </body>
+</html>

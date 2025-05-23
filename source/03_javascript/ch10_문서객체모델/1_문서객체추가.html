@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_문서객체추가</title>
+    <script>
+      window.onload = () => {
+        // * 문서객체추가 1 - 방법 : 1. h1 태그 생성 2. textNode 생성 3. textNode를 h1에 연결 4. h1을 body에 연결
+
+        // 1. h1 태그 생성
+        let h1 = document.createElement('h1');
+
+        // 2. textNode 생성
+        let textNode = document.createTextNode('추가함');
+
+        // 3. textNode를 h1에 연결
+        h1.appendChild(textNode);
+
+        // 4. h1을 body 에 연결
+        document.body.appendChild(h1);
+
+        // * 문서객체추가 2 - 방법 : 1. img 태그 생성 2. img태그에 속성 변경 3. img를 body에 연결
+
+        // 1. img 태그 생성
+        let img = document.createElement('img');
+
+        // 2. img태그에 속성 변경
+        img.setAttribute('src', './ch10_img/red.jpg');
+        img.setAttribute('alt', '추가된 이미지');
+        img.setAttribute('width', 300);
+        img.setAttribute('height', 300);
+
+        // 3. img를 body에 연결
+        document.body.appendChild(img);
+
+        // 문서객체추가 3 - innerHtml을 이용
+        document.body.innerHTML += '<h2>3번째 방법으로 추가</h2>';
+
+        let temp = `<ul>
+          <li>오렌지</li>
+          <li>빨강</li>
+          <li>노랑</li>
+          </ul>
+        `;
+        document.body.innerHTML += temp;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>TEXT NODE</h1>
+    <img src="./ch10_img/orange.jpg" alt="오렌지" />
+  </body>
+</html>
