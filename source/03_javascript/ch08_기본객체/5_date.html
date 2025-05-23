@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./5_date.js"></script>
+    <script>
+      let now = new Date();
+      document.write(now + '<br />');
+      document.write(now.toLocaleString() + '<br />');
+      document.write(now.toLocaleDateString() + '<br />');
+      document.write(now.toLocaleTimeString() + '<br />');
+
+      let openDay = new Date(2025, 3, 7, 9, 30, 0); // 월 0,1,2,3, ~ 11 → 4월 이면 3으로
+      document.write(`개강일 : ${openDay.toLocaleString()}<br />`);
+
+      // 몇일 차이인지
+      let day = now.getIntervalDay(openDay);
+
+      document.write(`now.getIntervalDay(openDay) : ${day} 일 지났다.<br />`);
+
+      day = openDay.getIntervalDay(now);
+      document.write(`openDay.getIntervalDay(now) : ${day} 일 지났다.<br />`);
+    </script>
+  </head>
+  <body></body>
+</html>
