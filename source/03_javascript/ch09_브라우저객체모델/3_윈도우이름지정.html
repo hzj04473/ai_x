@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3_윈도우이름지정</title>
+    <script>
+      const openWindow = () => {
+        let child = open('#', 'childWin', 'width=500, height=500, left=0, top=0');
+        if (!child) {
+          alert('팝업차단을 해지해 주세요.');
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="openWindow()">새창열기</button>
+    <br />
+    <a href="http://www.daum.net" target="childWin">다음</a>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4_child(big)</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        self.close();
+      }, 3000);
+
+      let closeWindow = () => {
+        self.close();
+      };
+    </script>
+  </head>
+  <body>
+    <img src="./ch09_img/large.jpg" alt="큰이미지" onclick="closeWindow()" />
+    <h2>3초 후 큰 그림은 닫힙니다.</h2>
+  </body>
+</html>

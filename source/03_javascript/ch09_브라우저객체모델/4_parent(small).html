@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4_parent(small)</title>
+    <script>
+      let child;
+      let openChild = function () {
+        let x = Math.round(document.documentElement.clientWidth / 2) - 300;
+        let y = Math.round(document.documentElement.clientHeight / 2) - 450;
+        console.log(x, y);
+        child = open('4_child(large).html', 'largePopup', `width=300, height=450, left=${x}, top=${y}`);
+
+        if (!child) {
+          alert('팝업 차단을 해지하여 주세요.');
+        }
+      };
+
+      let closeChild = function () {
+        child.close();
+      };
+    </script>
+  </head>
+  <body>
+    <h1>작은 그림의 parent 창</h1>
+    <img src="./ch09_img/small.jpg" alt="작은이미지" onmouseover="openChild()" onmouseout="closeChild()" />
+  </body>
+</html>

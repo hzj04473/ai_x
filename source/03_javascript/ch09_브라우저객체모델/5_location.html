@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5_location</title>
+    <script>
+      var sec = 3;
+      var id = setInterval(() => {
+        document.body.innerHTML += '<p>' + sec + '초</p>';
+        sec--;
+      }, 1000);
+
+      setTimeout(() => {
+        clearInterval(id);
+        // 페이지 변경(location)
+        // location = 'http://daum.net';
+        // location.href = 'http://www.daum.net';
+        location = '6_history.html';
+      }, 3000);
+    </script>
+  </head>
+  <body>
+    <h1>잠시 후 페이지 이동이 있겠습니다.</h1>
+  </body>
+</html>

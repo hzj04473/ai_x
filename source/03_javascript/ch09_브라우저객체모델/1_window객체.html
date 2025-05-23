@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_window객체</title>
+    <script>
+      // window.onclick = function () {
+      //   alert('클릭');
+      // };
+      var cnt = 0;
+      // obj = {
+      //   name: '홍',
+      //   age: 20,
+      //   method: function () {
+      //     alert(1);
+      //   },
+      // };
+      // for (let key in obj) {
+      //   document.write(++cnt + '.' + key + ':' + obj[key] + '<br />');
+      // }
+
+      for (let key in window) {
+        // document.write(`${++cnt}. ${key} : ${window[key]} <br />`);
+        // if (key.substr(0, 2) == 'on' || key == 'chk' || key == 'cnt') {
+        document.write(++cnt + '.' + key + ':' + window[key] + '<br />');
+        // }
+      }
+
+      function chk() {}
+    </script>
+  </head>
+  <body></body>
+</html>
