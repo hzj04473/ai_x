@@ -37,6 +37,12 @@
       let quiz2_image;
       let quiz3_image;
       let quiz4_url = ['https://www.naver.com', 'https://www.daum.net', 'https://www.google.com', 'https://www.youtube.com/'];
+      let quiz4_obj = {
+        naver: 'http://www.naver.com',
+        daum: 'http://www.daum.net',
+        google: 'http://www.google.com',
+        youtube: 'http://www.youtube.com',
+      };
       let quiz4_button;
 
       window.addEventListener('load', function () {
@@ -133,11 +139,25 @@
 
         // quiz4
         quiz4_button = document.querySelectorAll('#quiz4 button');
-        // console.log(quiz4_button);
+        // // console.log(quiz4_button);
 
+        // for (let i = 0; i < quiz4_button.length; i++) {
+        //   quiz4_button[i].addEventListener('click', function () {
+        //     open(quiz4_url[i], '_blank');
+        //   });
+        // }
+
+        // data-url을 쓸 경우
+        // for (let i = 0; i < quiz4_button.length; i++) {
+        //   quiz4_button[i].addEventListener('click', function () {
+        //     open(this.dataset.url, '_blank');
+        //   });
+        // }
+
+        // name 설정
         for (let i = 0; i < quiz4_button.length; i++) {
           quiz4_button[i].addEventListener('click', function () {
-            open(quiz4_url[i], '_blank');
+            open(quiz4_obj[this.name], '_blank');
           });
         }
       });
@@ -187,10 +207,14 @@
       <h3>quiz4 : 메뉴</h3>
       <div>
         <fieldset>
-          <button>네이버</button>
+          <!-- <button>네이버</button>
           <button>다음</button>
           <button>구글</button>
-          <button>유튜브</button>
+          <button>유튜브</button> -->
+          <button name="naver" data-url="http://www.naver.com">네이버</button>
+          <button name="daum" data-url="http://www.daum.com">다음</button>
+          <button name="google" data-url="http://www.google.com">구글</button>
+          <button name="youtube" data-url="http://www.youtube.com">유튜브</button>
         </fieldset>
       </div>
     </div>
