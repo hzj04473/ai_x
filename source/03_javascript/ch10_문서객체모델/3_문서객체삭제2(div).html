@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3_문서객체삭제</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+    <script>
+      let div;
+      window.onload = () => {
+        // id로 가져오기
+        // div = document.getElementById('wrap');
+
+        // class 로 가져오기
+        div = document.getElementsByClassName('content')[0];
+        console.log(div);
+
+        // Tagname으로 가져오기
+        div = document.getElementsByTagName('div')[0];
+        console.log(div);
+
+        // name으로 가져오기
+        div = document.getElementsByName('section')[0];
+        console.log(div);
+
+        // 첫번쨰 선택자로 
+        div = document.querySelector('div');
+        console.log(div);
+
+        // 선택자로 가져오기(배열)
+        div = document.querySelectorAll('div')[0];
+        console.log(div);
+      };
+      // 익명함수 정의 (화살표함수)
+      const append = () => {
+        // 마지막에 h1태그 하나 추가하기
+        // document.body.innerHTML += '<h1>HEADER</h1>';
+
+        let h1 = document.createElement('h1');
+
+        let textNode = document.createTextNode('HEADER');
+
+        h1.appendChild(textNode);
+
+        // 수정
+        div.appendChild(h1);
+
+        // h1 태그 뒤에 # 추가
+        let header = div.querySelectorAll('h1');
+        // console.log(header);
+        for (let i = 0; i < header.length; i++) {
+          header[i].innerHTML += '<span>#</span>';
+        }
+      };
+
+      // 익명함수 정의 (변수에 할당)
+      const remove = function () {
+        let h1 = div.querySelectorAll('h1');
+        // h1 = document.getElementsByTagName('h1');
+        console.log(h1);
+        if (h1.length > 0) {
+          // document.body.removeChild(h1[0]); // body의 h1[0] 문서객체 제거하기
+          div.removeChild(h1[h1.length - 1]); // body의 h1[0] 끝에서 부터 제거하기
+        } else {
+          alert('지울 h1태그가 없습니다.');
+        }
+      };
+      // 선언적 함수 정의
+      function removeAll() {
+        let h1 = div.getElementsByTagName('h1');
+        // console.log(h1);
+        // document.body.removeChild(h1[0], h1.length);
+        let cnt = h1.length;
+
+        for (i = 0; i < cnt; i++) {
+          div.removeChild(h1[0]);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrap" class="content" name="section">
+      <button onclick="removeAll()">h1태그 싹 다 제거하기(취소불가)</button>
+      <button onclick="remove()">h1태그(첫번쨰) 하나 지우기</button>
+      <button onclick="append()">h1태그 끝에 추가</button>
+      <h1>HEADER</h1>
+      <h1>HEADER</h1>
+    </div>
+  </body>
+</html>

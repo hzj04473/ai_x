@@ -27,7 +27,7 @@
       // quiz 1 : 빨, 주, 노, 초, 파, 남, 보 바탕의 테이블을 만들고 각 색에 마우스를 올리면(onmouseover) 바탕화면도 마우스위의 색상으로 바뀌고,
       // 마우스를 테이블에서 빼면(onmouseout) 바탕화면이 white로 원상복귀하는 페이지를 구현하시오.
       let color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet'];
-      let url = ['https://www.naver.com', 'https://www.daum.net', 'https://www.google.com', 'https://www.youtube.com/'];
+
       let tds = '';
       let buttons = '';
       window.onload = () => {
@@ -70,15 +70,6 @@
           <td onmouseover="changeColor(6)"></td>
         </tr>
       </table>
-    </div>
-    <div id="quiz2">
-      <h3>quiz2 : 버튼 누루면 URL로 이동</h3>
-      <div>
-        <button onclick="goUrl(0)">네이버</button>
-        <button onclick="goUrl(1)">다음</button>
-        <button onclick="goUrl(2)">구글</button>
-        <button onclick="goUrl(3)">유튜브</button>
-      </div>
     </div>
   </body>
 </html>

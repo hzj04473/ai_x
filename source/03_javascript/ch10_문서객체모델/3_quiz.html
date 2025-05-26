@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #quiz2 > h3 {
+        text-align: center;
+      }
+
+      #quiz2 > div {
+        margin: 0 auto;
+        width: 300px;
+      }
+      #quiz2 fieldset {
+        width: 300px;
+        background-color: bisque;
+        text-align: center;
+        padding: 30px 0;
+      }
+    </style>
+    <script>
+      let url = ['https://www.naver.com', 'https://www.daum.net', 'https://www.google.com', 'https://www.youtube.com/'];
+      let buttons = '';
+      window.onload = () => {
+        buttons = document.querySelectorAll('#quiz2 div > fieldset > button');
+        console.log(buttons);
+      };
+
+      // openNewWindow.location.href = 'http://www.naver.com';
+      for (let i = 0; (l = button.length); i++) {}
+      const goUrl = (number) => {
+        open(url[number], '_blank');
+      };
+    </script>
+  </head>
+  <body>
+    <div id="quiz2">
+      <h3>quiz2 : 버튼 누루면 URL로 이동</h3>
+      <div>
+        <fieldset>
+          <button onclick="goUrl(0)">네이버</button>
+          <button onclick="goUrl(1)">다음</button>
+          <button onclick="goUrl(2)">구글</button>
+          <button onclick="goUrl(3)">유튜브</button>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

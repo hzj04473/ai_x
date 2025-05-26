@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>1_인라인이벤트모델</title>
+    <style>
+      h1 {
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      const whenClick = () => {
+        // alert('클릭했네');
+        let h1 = document.querySelector('h1');
+        h1.innerHTML = 'click엇 ! 클릭했네';
+        h1.style.color = 'red';
+        // h1.style = 'color:red';
+        setTimeout(() => {
+          h1.innerHTML = 'click해 봐';
+          h1.style.color = '#000';
+        }, 500);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 onclick="whenClick()">click해 봐</h1>
+  </body>
+</html>

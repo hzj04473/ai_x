@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4_이벤트강제발생</title>
+    <script>
+      window.onload = () => {
+        let btnA = document.querySelector('#btnA');
+        let btnB = document.querySelector('#btnB');
+        let countA = document.querySelector('#countA');
+        let countB = document.querySelector('#countB');
+
+        btnA.addEventListener('click', () => {
+          countA.innerHTML = Number(countA.innerHTML) + 1;
+          //  btnB를 강제 클릭 이벤트 발생
+          btnB.click(); // onclick이 아닌 click 이벤트를 해야 한다.
+        });
+
+        btnB.addEventListener('click', () => {
+          countB.innerHTML = Number(countB.innerHTML) + 1;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button id="btnA">BUTTON A</button>
+    <button id="btnB">BUTTON B</button>
+    <h1>Button A 클릭 횟수 : <span id="countA">0</span></h1>
+    <h1>Button B 클릭 횟수 : <span id="countB">0</span></h1>
+  </body>
+</html>
