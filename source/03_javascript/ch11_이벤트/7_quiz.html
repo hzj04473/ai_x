@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      #quiz1 table {
+        width: 500px;
+        margin: 10px auto;
+        background-color: darkgreen;
+      }
+      #quiz1 td {
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      #quiz2 ul {
+        overflow: hidden;
+      }
+      #quiz2 li {
+        float: left;
+        list-style: none;
+        margin: 3px;
+      }
+
+      #quiz4 div {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid blue;
+        text-align: center;
+      }
+    </style>
+    <script>
+      let td;
+      let keyUp;
+
+      let quiz2_image;
+      let quiz3_image;
+      let quiz4_url = ['https://www.naver.com', 'https://www.daum.net', 'https://www.google.com', 'https://www.youtube.com/'];
+      let quiz4_button;
+
+      window.addEventListener('load', function () {
+        // console.log('로드 완료');
+        // quiz1
+        td = document.querySelectorAll('#quiz1 td');
+
+        window.addEventListener('keydown', function () {
+          for (let i = 0; i < td.length; i++) {
+            td[i].style.backgroundColor = '#fff';
+            td[i].style.color = '#000';
+          }
+        });
+
+        window.addEventListener('keyup', function (e) {
+          console.log(e);
+          // keyup = e.keyCode;
+          // td = document.querySelectorAll('#quiz1 td');
+
+          // if (96 <= keyup && keyup <= 105) {
+          //   console.log(keyup - 96);
+          //   td[keyup - 96].style = 'background-color:yellow';
+          //   if (keyup - 96 < 8) {
+          //     td[keyup - 96 + 1].style = 'background-color:red';
+          //   }
+
+          //   // span.innerHTML = `우측숫자 키보드 ${key - 96} 를 입력`;
+          // } else if (48 <= keyup && keyup <= 57) {
+          //   console.log(keyup - 48);
+          //   td[keyup - 48].style = 'background-color:yellow';
+          //   if (keyup - 48 < 8) {
+          //     td[keyup - 48 + 1].style = 'background-color:red';
+          //   }
+
+          //   // span.innerHTML = `윗 숫자 키보드 ${key - 48} 를 입력`;
+          // } else {
+          //   alert(`${keyup}를 잘못 누르셨습니다.\n키는 0~8까지입니다\n확인해주세요.`);
+          // }
+
+          keyup = parseInt(e.key);
+          td = document.querySelectorAll('#quiz1 td');
+          if (keyup >= 0 && keyup <= 8) {
+            td[keyup].style = 'background-color:yellow';
+            td[keyup].style.fontSize = '1.5em';
+
+            if (keyup == 8) {
+              td[keyup - 1].style = 'color:red';
+            } else if (keyup == 0) {
+              td[keyup + 1].style = 'color:red';
+            } else if (keyup > 0 && keyup < 8) {
+              td[keyup + 1].style = 'color:red';
+              td[keyup - 1].style = 'color:red';
+            }
+          } else {
+            alert(`${keyup}를 잘못 누르셨습니다.\n키는 0~8까지입니다\n확인해주세요.`);
+          }
+        });
+
+        // quiz2
+        quiz2_image = document.querySelectorAll('#quiz2 img');
+        quiz2_image.forEach((v, i) => {
+          quiz2_image[i].addEventListener('mouseover', function () {
+            // console.log(this);
+            this.setAttribute('src', `./ch11_img/${i}over.jpg`);
+            // alert(this.src);
+          });
+          quiz2_image[i].addEventListener('mouseout', function () {
+            this.setAttribute('src', `./ch11_img/${i}out.jpg`);
+          });
+        });
+        // for (let i = 0; i < quiz2_image.length; i++) {
+        //   quiz2_image[i].addEventListener('mouseover', function () {
+        //     // console.log(this);
+        //     this.setAttribute('src', `./ch11_img/${i}over.jpg`);
+        //     // alert(this.src);
+        //   });
+        //   quiz2_image[i].addEventListener('mouseout', function () {
+        //     this.setAttribute('src', `./ch11_img/${i}out.jpg`);
+        //   });
+        // }
+
+        // quiz3
+        quiz3_image = document.querySelector('#quiz3 img');
+        quiz3_image.addEventListener('mouseover', function () {
+          // console.log(this);
+          this.setAttribute('src', './ch11_img/but2.gif');
+          this.setAttribute('alt', 'mouse down');
+        });
+        quiz3_image.addEventListener('mouseout', function () {
+          // console.log(this);
+          this.setAttribute('src', './ch11_img/but1.gif');
+          this.setAttribute('alt', 'mouse up');
+        });
+
+        // quiz4
+        quiz4_button = document.querySelectorAll('#quiz4 button');
+        // console.log(quiz4_button);
+
+        for (let i = 0; i < quiz4_button.length; i++) {
+          quiz4_button[i].addEventListener('click', function () {
+            open(quiz4_url[i], '_blank');
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="quiz1">
+      <table>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+      </table>
+    </div>
+    <div id="quiz2">
+      <ul>
+        <li>
+          <a href="#"><img src="./ch11_img/0out.jpg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./ch11_img/1out.jpg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./ch11_img/2out.jpg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./ch11_img/3out.jpg" /></a>
+        </li>
+      </ul>
+    </div>
+    <div id="quiz3">
+      <img src="./ch11_img/but1.gif" alt="mouse up" />
+    </div>
+
+    <div id="quiz4">
+      <h3>quiz4 : 메뉴</h3>
+      <div>
+        <fieldset>
+          <button>네이버</button>
+          <button>다음</button>
+          <button>구글</button>
+          <button>유튜브</button>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

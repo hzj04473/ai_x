@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6_이벤트제한2(addEventListener)</title>
+    <script>
+      window.addEventListener('load', () => {
+        document.querySelector('form').addEventListener('submit', (e) => {
+          let pw = document.querySelector('input[name="pw"]');
+          let pwChk = document.querySelector('input[name="pwChk"]');
+
+          if (!pw.value) {
+            alert('비밀번호를 입력하세요.');
+            pw.focus();
+            e.preventDefault(); // 기본 이벤트 제한(디폴트 이벤트가 이번만 실핼이 안됨)
+          }
+          if (pw.value != pwChk.value) {
+            alert('비밀번호를 확인하세요');
+            pw.value = '';
+            pwChk.value = '';
+            pw.focus();
+            e.preventDefault(); // 기본 이벤트 제한
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 기존에 이렇게 섰지만 : <form action="#" name="frm" onsubmit="return chk()">pw : <input type="password" name="pw" /></form> -->
+    <form action="#" method="get">
+      PW : <input type="password" name="pw" /><br />
+      PWCHK : <input type="password" name="pwChk" /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
