@@ -29,14 +29,11 @@
                 // 요청경로를 정상적으로 응답받지 않을 경우 예외 객체 발생
                 throw new Error(`${response.status} / ${response.statusText}`);
               }
+
               return response.text();
             })
-            .then((data) => {
-              document.querySelector('span#idConfirm').innerHTML = data.trim();
-            })
-            .catch((error) => {
-              console.log(error.message);
-            });
+            .then((data) => (document.querySelector('span#idConfirm').innerHTML = data.trim()))
+            .catch((error) => console.log(error.message));
         });
       });
     </script>
