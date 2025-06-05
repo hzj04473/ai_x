@@ -2,19 +2,19 @@
 	{
 		"name": "홍길동",
 		"age": 22,
-		"email": "aa@aa.com",
+		"email": "a@a.com",
 		"address": "서울"
 	},
 	{
 		"name": "신길동",
 		"age": 32,
-		"email": "aa@aa.com",
+		"email": "a@a.com",
 		"address": "서울"
 	},
 	{
 		"name": "김길동",
 		"age": 42,
-		"email": "aa@aa.com",
+		"email": "a@a.com",
 		"address": "서울"
 	}
 ]
