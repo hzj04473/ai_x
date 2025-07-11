@@ -19,4 +19,4 @@ def aptPredictHandler(year, square, floor):
     return {'year':year, 'square':'aquare', 'floor':floor, 'price':answer.replace('원','').replace(',','')}
 if __name__ == "__main__":
     # debug=True : 코드가 변경될 때 마다 서버 자동 재시작
-    application.run(port=5001, debug=True)
+    application.run(port=5000, debug=True)
