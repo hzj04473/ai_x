@@ -10,7 +10,12 @@
     <!-- name, name_length, price, name_list 변수 사용 -->
     <h1>이름을 입력해 주세요.</h1>
     <form action="/" method="post">
-      <input type="text" name="name" value="{% if name %}{{ name | trim | upper }}{% endif%}" placeholder="이름을 입력해 주세요." />
+      <input
+        type="text"
+        name="name"
+        value="{% if name %}{{ name | trim | upper }}{% endif%}"
+        placeholder="이름을 입력해 주세요."
+      />
       <input type="submit" value="전송" />
     </form>
     {{names_list}} {% if name_length and name_length % 2 == 0 %}
@@ -19,13 +24,13 @@
     <h1>이름의 길이가 홀수 : {{name}} ({{name | length }})</h1>
     {% else %}
     <h1>이름이 입력되지 않았습니다.</h1>
-    {% endif%}
+    {% endif %}
     <hr />
     {% if names_list %}
     <ul>
       {% for name in names_list %} {% if loop.last %}
       <li>
-        <span style="color: blue"> {{loop.index}} / {{ names_list | length }}. {{name}} </span>
+        <span style="color: blue">{{loop.index}} / {{ names_list | length }}. {{name}}</span>
       </li>
       {% else %}
       <li>{{loop.index}} / {{ names_list | length }}. {{name}}</li>
