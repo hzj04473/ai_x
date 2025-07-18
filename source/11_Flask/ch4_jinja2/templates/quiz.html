@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/file.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/flask.png') }}" />
+  </head>
+  <!-- {{no | int}} -->
+  <body>
+    <h1>구구단을 외자</h1>
+    <p>원하는 구구단을 입력하세요.</p>
+    <form action="" method="POST">
+      <input type="number" name="no" value="{% if no %} {{no | trim | int}}{% endif %}" placeholder="구구단을 입력하세요." />
+      <input type="submit" value="구구단 확인하기" />
+    </form>
+    <h2>
+      <!-- html 주석 -->
+      {# jinja 주석 #} {% if no %} {% for i in range(1, 10) %}
+      <h3>{{no}} * {{i}} = {{no | int * i | int}}</h3>
+      {% endfor %} {% else %} 아직 구구단 입력 전 {% endif %}
+    </h2>
+  </body>
+</html>

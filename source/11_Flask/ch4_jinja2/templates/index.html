@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/file.css') }}" />
-    <link rel="icon" href="{{ url_for('static', filename='images/flask.png') }}" />
   </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/file.css') }}" />
+  <link rel="icon" href="{{ url_for('static', filename='images/flask.png') }}" />
   <body>
     <!-- name, name_length, price, name_list 변수 사용 -->
     <h1>이름을 입력해 주세요.</h1>
@@ -24,7 +24,9 @@
     {% if names_list %}
     <ul>
       {% for name in names_list %} {% if loop.last %}
-      <li><span style="color: blue">{{loop.index}} / {{ names_list | length }}. {{name}}</span></li>
+      <li>
+        <span style="color: blue"> {{loop.index}} / {{ names_list | length }}. {{name}} </span>
+      </li>
       {% else %}
       <li>{{loop.index}} / {{ names_list | length }}. {{name}}</li>
       {% endif %} {%endfor%}
