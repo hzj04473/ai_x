@@ -9,3 +9,7 @@ def handler_viewFunc():
     return "<h1>Hello, World</h1>"
 
 # 파일명이 app.py 이면, 실행은 flask run --debug --port=5000 (기본)
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
+    
