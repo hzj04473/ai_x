@@ -2,3 +2,5 @@
 .__pycache__/
 .env
 ch14_image/
+chroma
+chroma_upstage/
