@@ -1,0 +1,21 @@
+{% extends 'base.jinja.html' %}
+
+{% block title %}Welcome Page{% endblock %}
+
+{% block content %}
+    <h2>{{greeting}}</h2>
+    <h1 onclick="location='/wordcnt'">{{msg}} (글자수 세기)</h1>
+    <img src="static/img/django.png" alt="django" />
+    {% load static %}
+    <img src="{% static 'img/django.png' %}" alt="django" />
+    <br>
+    <a href="/test">테스트 페이지로 이동</a>
+    <a href="{% url 'test'%}">테스트 페이지로 이동</a>
+    <button onclick="location.href='/test'">테스트 페이지로 이동</button>
+    <button onclick="location.href='{% url 'test' %}'">테스트 페이지로 이동</button>
+    <br>
+    <a href="/showId/123">showId: 123</a>
+    <a href="{% url 'showIntId' 123 %}">showId: 123</a>
+    <a href="/showId/abc">showId: abc</a>
+    <a href="{% url 'showStrId' 'abc' %}">showStrId: abc</a>
+{% endblock %}
