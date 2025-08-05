@@ -10,3 +10,5 @@ t_source/
 취업/
 프로젝트_결과물/
 ai_x-main/
+__pycache__/
+.ipynb_checkpoints/

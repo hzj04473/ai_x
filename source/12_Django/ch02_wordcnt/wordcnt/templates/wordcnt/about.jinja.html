@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.jinja.html" %}
 
 {% block title %}도움말{% endblock %}
 
@@ -6,4 +6,5 @@
   <h1>about 페이지</h1>
   <p>글자수와 단어카운트를 하는 기능입니다</p>
   <a href="/wordcnt">글자입력</a>
+  <a href="{% url 'wordcnt:wordinput' %}">글자입력</a>
 {% endblock %}
