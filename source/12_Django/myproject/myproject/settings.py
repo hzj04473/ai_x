@@ -9,26 +9,26 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 
-1. SECRET_KEY 처리 (.env)
+1. SECRET_KEY 처리(.env)
 2. 앱등록
-3. myproject 밑에 templates 폴더와 static 폴더 추가 등록 (base.html, footer.html, ~)
+3. myproject밑에 templates 폴더와 static 폴더 추가 등록(base.html, footer.html, ~)
 4. 한국어 등록
 5. timezone 등록
-
 """
 
-import os
 from pathlib import Path
-from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# print("⭐️ BASE_DIR : ", BASE_DIR)
+# print('★ BASE_DIR :', BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+from decouple import config
+
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -46,8 +46,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django_extensions",  # 추가 앱 등록 (django 5.2부터는 shell에도 model자동 import 기능이 있음)
+    "django_extensions",  # 추가 앱 등록(django 5.2부터는 shell에도 model 자동 import)
     "blog",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -127,14 +128,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-# app 밑의 static 폴더 추가
 STATIC_URL = "static/"
-
-# app 밖에 static 폴더 추가
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "myproject", "static"),
 ]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

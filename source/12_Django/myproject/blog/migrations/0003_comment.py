@@ -7,22 +7,40 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0002_post_url_alter_post_region_alter_post_title'),
+        ("blog", "0002_post_url_alter_post_lnglat_alter_post_region_and_more"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Comment',
+            name="Comment",
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('author', models.CharField(blank=True, max_length=20, null=True, verbose_name='작성자')),
-                ('message', models.TextField(verbose_name='댓글')),
-                ('create_at', models.DateTimeField(auto_now_add=True, verbose_name='작성일시')),
-                ('update_at', models.DateTimeField(auto_now=True, verbose_name='최종수정일시')),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.post')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "author",
+                    models.CharField(
+                        blank=True, max_length=20, null=True, verbose_name="이름"
+                    ),
+                ),
+                ("message", models.TextField(verbose_name="댓글")),
+                ("create_at", models.DateField(auto_now_add=True)),
+                ("update_at", models.DateTimeField(auto_now=True)),
+                (
+                    "post",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="blog.post"
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-create_at', '-update_at'],
+                "ordering": ["-create_at", "-update_at"],
             },
         ),
     ]

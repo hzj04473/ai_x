@@ -14,13 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
 
+# from blog import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", lambda reg: redirect("blog:index")),  # 루트 URL을 blog 앱으로 연결
-    path("blog/", include("blog.urls")),  # blog 앱 URL 연결 (앞의 슬래시 제거)
+    path("", lambda req : redirect("blog:index")),
+    path("blog/", include("blog.urls")),
 ]
