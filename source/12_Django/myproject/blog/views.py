@@ -13,8 +13,20 @@ def index(request):
 
 
 def list(request):
+    print(
+        "request.user :", request.user
+    )  # 로그인 전 : <AnonymousUser> 로그인 후 : 로그인을 한 User 객체
+
     post_list = Post.objects.all()
-    return render(request, "blog/index.jinja.html", {"post_list": post_list})
+
+    return render(
+        request,
+        "blog/index.jinja.html",
+        {
+            "post_list": post_list,
+            #  "user": request.user
+        },
+    )
 
 
 def detail(request, post_id):

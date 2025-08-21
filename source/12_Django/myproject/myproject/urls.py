@@ -27,6 +27,15 @@ urlpatterns = [
     path("blog/", include("blog.urls")),
     path("book/", include("book.urls")),
     path("article/", include("article.urls")),
+    path("accounts/", include("accounts.urls")),
+    # path(
+    #     "accounts/login/",
+    #     LoginView.as_view(template_name="accounts/login_form.html"),
+    #     name="login",
+    # ),
+    # path("accounts/logout/", LogoutView.as_view(), name="logout"),
+    # path("accounts/signup/", views.signup, name="signup"),
+    # path("accounts/profile/", views.profile, name="profile"),
 ]
 
 
