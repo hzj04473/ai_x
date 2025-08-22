@@ -16,8 +16,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 5. timezone 등록
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -153,3 +153,13 @@ MEDIA_URL = "/media/"
 
 # 업로드한 파일이 저장될 폴더 -> 이미지 파일 지원 라이브러리 pip install pillow
 MEDIA_ROOT = os.path.join(BASE_DIR, "_media")
+
+
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 465
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
